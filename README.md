@@ -1,0 +1,1 @@
+# Django_education_seminars
