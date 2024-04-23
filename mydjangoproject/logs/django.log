@@ -163,3 +163,11 @@ ERROR 2024-04-23 14:29:22,590 basehttp 11996 12332 "GET /games/last/ HTTP/1.1" 5
 INFO 2024-04-23 14:31:13,610 autoreload 11996 2872 D:\Django_education_seminars\mydjangoproject\gamesapp\views.py changed, reloading.
 INFO 2024-04-23 14:31:13,883 autoreload 9868 3212 Watching for file changes with StatReloader
 INFO 2024-04-23 14:31:16,581 basehttp 9868 14940 "GET /games/last/ HTTP/1.1" 200 209
+INFO 2024-04-23 14:48:22,709 autoreload 13884 10404 Watching for file changes with StatReloader
+INFO 2024-04-23 14:49:42,744 autoreload 4420 10680 Watching for file changes with StatReloader
+INFO 2024-04-23 14:51:17,245 autoreload 1968 9072 Watching for file changes with StatReloader
+INFO 2024-04-23 14:51:18,768 basehttp 1968 14380 "GET / HTTP/1.1" 200 40
+INFO 2024-04-23 14:51:27,348 basehttp 1968 14380 "GET /blog HTTP/1.1" 301 0
+INFO 2024-04-23 14:51:27,361 basehttp 1968 10548 "GET /blog/ HTTP/1.1" 200 39
+INFO 2024-04-23 14:51:48,934 autoreload 1968 9072 D:\Django_education_seminars\mydjangoproject\blogapp\views.py changed, reloading.
+INFO 2024-04-23 14:51:49,213 autoreload 8944 14328 Watching for file changes with StatReloader
