@@ -8,8 +8,7 @@ def set_authors(request):
     for i in range(10):
         author = models.Author.objects.create(name=f'Автор {i}', surname=f'Фамилия {i}', email=f'автор{i}@mail.ru',
                                               bio=f'Биография {i}', birthday=datetime.now(),
-                                              full_name=f'{models.Author.objects.get(id=i).name} '
-                                                        f'{models.Author.objects.get(id=i).surname}')
+                                              full_name=f'Автор {i} Фамилия {i}')
         author.save()
     return HttpResponse("Авторы добавлены")
 
