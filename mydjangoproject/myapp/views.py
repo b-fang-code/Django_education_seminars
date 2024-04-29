@@ -2,11 +2,17 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-# Create your views here.
-
 def index(request):
-    return HttpResponse("Hello, world. You're at the myapp index.")
+    context = {
+        'title': 'Main page',
+        'name': 'Pavel',
+    }
+    return render(request, 'myapp/index.html', context)
 
 
 def about(request):
-    return HttpResponse("About us")
+    context = {
+        'title': 'About me',
+        'number': 1
+    }
+    return render(request, 'myapp/about.html', context)
