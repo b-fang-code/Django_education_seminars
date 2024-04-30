@@ -2,11 +2,24 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import random
 from datetime import datetime
-from . import models
+from . import models, forms
 
 
 def index(request):
-    return HttpResponse("Games")
+    if request.method == 'POST':
+        form = forms.GameForm(request.POST)
+        if form.is_valid():
+            choice = form.cleaned_data['choice']
+            count = form.cleaned_data['count']
+            if choice == 'C':
+                return get_n_coins(request, count)
+            elif choice == 'K':
+                return get_n_cubes(request, count)
+            elif choice == 'N':
+                return get_n_numbers(request, count)
+    else:
+        form = forms.GameForm()
+    return render(request, 'gamesapp/index.html', {'form': form})
 
 
 def coinflip(request):
