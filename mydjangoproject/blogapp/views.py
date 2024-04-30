@@ -18,6 +18,7 @@ def set_authors(request):
             author = models.Author(name=name, surname=surname, email=email, bio=bio, birthday=birthday,
                                    full_name=full_name)
             author.save()
+            return render(request, 'blogapp/add_author_form.html', {'report': 'Автор добавлен'})
     else:
         form = forms.AuthorForm()
     return render(request, 'blogapp/add_author_form.html', {'form': form})
